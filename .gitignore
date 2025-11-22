@@ -3,7 +3,6 @@ __pycache__/
 admin_log.json
 admin.json
 audit_log.json
-
 dwxconnect/
 
 # Logs
@@ -21,13 +20,13 @@ outputs
 
 # Ignore joblib serialized files
 *.joblib
+.joblibs
 *.parquet
 
 # Ignore PNG, JSON, CSV
 .json
 .png
 .csv
-.joblibs
 .JSON
 
 # Environment files
@@ -55,4 +54,6 @@ dist-ssr
 
 # OS-specific
 Thumbs.db
-backend/results
+
+# Can become very BIG during testing running models
+backend/results 
