@@ -1,0 +1,19 @@
+{
+  "name": "ml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel frontend backend",
+    "build": "cd frontend && npm run build",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && python app.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

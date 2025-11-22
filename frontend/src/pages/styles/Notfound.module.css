@@ -1,0 +1,14 @@
+.notfound_container {
+  height: 90.2vh;
+  align-content: center;
+  text-align: center;
+}
+.title {
+  font-size: var(--fs-900);
+  line-height: 70px;
+  letter-spacing: 3px;
+}
+.subtitle {
+  font-size: var(--fs-400);
+  margin-bottom: 2.5rem;
+}

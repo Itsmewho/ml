@@ -1,0 +1,45 @@
+.homeContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.homeGrid {
+  display: grid;
+  grid-template-columns: 1fr 0.15fr 0.035fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+.gridMenu {
+  background-color: hsl(from var(--clr-userscreens) h s l / 0.9);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--clr-bordercolor);
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 8px;
+}
+.gridSubMenu {
+  background-color: hsl(from var(--clr-userscreens) h s l / 0.9);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--clr-bordercolor);
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+.subGrid {
+  display: grid;
+  grid-template-rows: 1fr, 1fr;
+  height: 100%;
+  width: 100%;
+}
+.panel {
+  background-color: hsl(from var(--clr-userscreens) h s l / 0.9);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--clr-bordercolor);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 8px;
+}
