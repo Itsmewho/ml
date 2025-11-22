@@ -9,7 +9,7 @@
   backdrop-filter: blur(4px);
   border: 1px solid var(--clr-bordercolor);
   display: flex;
-  padding: 5px;
+  padding: 8px;
   margin: 5px;
   border-radius: 8px;
 }

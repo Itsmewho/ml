@@ -5,7 +5,7 @@
 
 .homeGrid {
   display: grid;
-  grid-template-columns: 1fr 0.15fr 0.035fr;
+  grid-template-columns: 1fr 0.15fr 0.03fr;
   grid-template-rows: 1fr;
   height: 100%;
 }
@@ -15,7 +15,8 @@
   backdrop-filter: blur(4px);
   border: 1px solid var(--clr-bordercolor);
   display: flex;
-  padding: 5px;
+  justify-content: center;
+  padding: 8px;
   margin: 5px;
   border-radius: 8px;
 }
@@ -24,7 +25,7 @@
   backdrop-filter: blur(4px);
   border: 1px solid var(--clr-bordercolor);
   display: flex;
-  padding: 5px;
+  padding: 8px;
   margin: 5px;
   border-radius: 8px;
 }
@@ -39,7 +40,7 @@
   background-color: hsl(from var(--clr-userscreens) h s l / 0.9);
   backdrop-filter: blur(4px);
   border: 1px solid var(--clr-bordercolor);
-  padding: 5px;
+  padding: 8px;
   margin: 5px;
   border-radius: 8px;
 }

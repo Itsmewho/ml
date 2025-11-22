@@ -9,7 +9,7 @@ function HomePage() {
       <div className={style.homeGrid}>
         <div className={style.gridMain}>
           <div className={style.subGrid}>
-            <div className={style.panel}>stock chart</div>
+            <div className={style.panel}>visuals</div>
             <div className={style.panel}>fundamentals poep</div>
           </div>
         </div>
