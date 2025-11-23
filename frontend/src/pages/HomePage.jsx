@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import style from './styles/HomePage.module.css';
+import { APP_DATA } from '../data/topicData';
 
 function HomePage() {
   const [selectedView, setSelectedView] = useState('data');
