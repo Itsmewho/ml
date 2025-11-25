@@ -11,6 +11,12 @@ import dlActive from '../assets/menu/brainGreen.svg';
 import rlDefault from '../assets/menu/squirrel.svg';
 import rlActive from '../assets/menu/squirrellGreen.svg';
 
+import ulDefault from '../assets/menu/radiation.svg';
+import ulActive from '../assets/menu/radiationGreen.svg';
+
+import slDefault from '../assets/menu/microscope.svg';
+import slActive from '../assets/menu/microscopeGreen.svg';
+
 export const APP_DATA = {
   math: {
     label: 'Mathematics',
@@ -48,6 +54,22 @@ export const APP_DATA = {
     icons: {
       default: rlDefault,
       active: rlActive,
+    },
+    topics: [{ id: 'perceptron', label: 'Perceptron' }],
+  },
+  ul: {
+    label: 'unsupervised',
+    icons: {
+      default: ulDefault,
+      active: ulActive,
+    },
+    topics: [{ id: 'perceptron', label: 'Perceptron' }],
+  },
+  sl: {
+    label: 'supervised',
+    icons: {
+      default: slDefault,
+      active: slActive,
     },
     topics: [{ id: 'perceptron', label: 'Perceptron' }],
   },
