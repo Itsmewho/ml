@@ -1,8 +1,23 @@
-// src/data/topicData.js
+// 1. Import the SVG assets directly
+import mathDefault from '../assets/menu/flask-conical.svg';
+import mathActive from '../assets/menu/flask-conicalGreen.svg';
+
+import mlDefault from '../assets/menu/chart-network.svg';
+import mlActive from '../assets/menu/chart-networkGreen.svg';
+
+import dlDefault from '../assets/menu/brain.svg';
+import dlActive from '../assets/menu/brainGreen.svg';
+
+import rlDefault from '../assets/menu/squirrel.svg';
+import rlActive from '../assets/menu/squirrellGreen.svg';
+
 export const APP_DATA = {
   math: {
     label: 'Mathematics',
-    iconClass: 'iconMath', // matches CSS class
+    icons: {
+      default: mathDefault,
+      active: mathActive,
+    },
     topics: [
       { id: 'sigmoid', label: 'Sigmoid Function' },
       { id: 'relu', label: 'ReLU Activation' },
@@ -11,7 +26,10 @@ export const APP_DATA = {
   },
   ml: {
     label: 'Machine Learning',
-    iconClass: 'iconML',
+    icons: {
+      default: mlDefault,
+      active: mlActive,
+    },
     topics: [
       { id: 'linear_reg', label: 'Linear Regression' },
       { id: 'knn', label: 'K-Nearest Neighbors' },
@@ -19,7 +37,18 @@ export const APP_DATA = {
   },
   dl: {
     label: 'Deep Learning',
-    iconClass: 'iconDL',
+    icons: {
+      default: dlDefault,
+      active: dlActive,
+    },
+    topics: [{ id: 'perceptron', label: 'Perceptron' }],
+  },
+  rl: {
+    label: 'Reinforcement',
+    icons: {
+      default: rlDefault,
+      active: rlActive,
+    },
     topics: [{ id: 'perceptron', label: 'Perceptron' }],
   },
 };

@@ -1,5 +1,6 @@
 .notfound_container {
-  height: 90.2vh;
+  background-color: black;
+  height: 100vh;
   align-content: center;
   text-align: center;
 }

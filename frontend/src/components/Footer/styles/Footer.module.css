@@ -5,14 +5,32 @@
 }
 
 .footer_container {
-  padding: 10px;
-  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 3px;
+  padding: 5px;
   border-radius: 5px;
   border: 1px solid var(--clr-bordercolor);
-  background-color: hsl(from var(--clr-userscreens) h s l / 0.85);
+  background-color: hsl(from var(--clr-background) h s l / 0.85);
   backdrop-filter: blur(4px);
 }
+
 .footer_text {
-  height: 25px;
+  margin-top: 8px;
+  height: 20px;
   color: var(--clr-white);
+}
+.footerLink {
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  background-image: url(../../../assets/footer/github.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-image: url(../../../assets/footer/githubGreen.svg);
+  }
 }

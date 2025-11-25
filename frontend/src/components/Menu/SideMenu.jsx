@@ -1,39 +1,48 @@
+import { useState } from 'react';
 import styles from './styles/side.module.css';
 import PropTypes from 'prop-types';
 import { APP_DATA } from '../../data/topicData';
+import Tooltip from '../Tooltip/Tooltip';
 
-// Receiving props to control the parent state
 const SideMenu = ({ activeCategory, onSelectCategory }) => {
-  const handleKeyDown = (e, key) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      onSelectCategory(key);
-    }
-  };
+  const [hoveredKey, setHoveredKey] = useState(null);
 
   return (
     <div className={styles.menuContainer}>
       <div className={styles.iconGroup}>
-        {/* Map through our APP_DATA to generate icons dynamically */}
         {Object.keys(APP_DATA).map((key) => {
           const category = APP_DATA[key];
           const isActive = activeCategory === key;
+          const isHovered = hoveredKey === key;
+
+          // Determine which icon source to show
+          // Show active icon if: It is selected OR It is hovered
+          const iconSrc =
+            isActive || isHovered ? category.icons.active : category.icons.default;
 
           return (
             <div
               key={key}
-              role="button"
-              tabIndex={0}
               className={`${styles.iconWrapper} ${isActive ? styles.activeWrapper : ''}`}
-              onClick={() => onSelectCategory(key)}
-              onKeyDown={(e) => handleKeyDown(e, key)}
-              title={category.label} // Using title as basic tooltip for now
+              onMouseEnter={() => setHoveredKey(key)}
+              onMouseLeave={() => setHoveredKey(null)}
             >
-              {/* This represents your icon div (e.g., className={styles.iconMath}) */}
-              <div className={styles[category.iconClass]}>
-                {/* If you don't have background-images yet, use text as placeholder */}
-                {!styles[category.iconClass] && category.label[0]}
-              </div>
+              <Tooltip
+                tooltipText={category.label}
+                position="left"
+                onClick={() => onSelectCategory(key)}
+              >
+                <img
+                  src={iconSrc}
+                  alt={category.label}
+                  className={styles.svgIcon}
+                  // Fallback if image fails to load
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentNode.innerText = category.label.charAt(0);
+                  }}
+                />
+              </Tooltip>
             </div>
           );
         })}

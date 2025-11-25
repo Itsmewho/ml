@@ -1,16 +1,15 @@
 import PropTypes from 'prop-types';
+import styles from './styles/fundamentals.module.css';
 
 const FundamentalsWindow = ({ topicId }) => {
   return (
-    <div style={{ color: '#ccc' }}>
-      <h3>Fundamentals & Logic</h3>
+    <div className={styles.fundamentalContainer}>
+      <h3 className="fs-400">Fundamentals & Logic</h3>
       <p>
         Adjust parameters for: <strong>{topicId}</strong>
       </p>
       {/* Placeholder for future sliders/inputs */}
-      <div style={{ padding: '10px', border: '1px dashed #555' }}>
-        Control Panel Placeholder
-      </div>
+      <div className={styles.ControlPanel}>Control Panel Placeholder</div>
     </div>
   );
 };

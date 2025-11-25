@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+// Context Providers
+import { ToastProvider } from './context/ToastContext.jsx';
+
+// Components
 import App from './App.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
@@ -24,6 +28,9 @@ const router = createBrowserRouter([
 // Render the app using the RouterProvider
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* Providers wrap the Router so they are available globally */}
+    <ToastProvider>
+      <RouterProvider router={router} />
+    </ToastProvider>
   </React.StrictMode>,
 );

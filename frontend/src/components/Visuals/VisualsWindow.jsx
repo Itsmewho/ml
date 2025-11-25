@@ -1,22 +1,11 @@
 import PropTypes from 'prop-types';
+import styles from './styles/visuals.module.css';
 
 const VisualsWindow = ({ topicId }) => {
   return (
-    <div style={{ width: '100%', height: '100%', color: 'white' }}>
-      <h2>Visuals Window</h2>
+    <div className={styles.visualContainer}>
       <p>Current Topic: {topicId}</p>
-      <div
-        style={{
-          width: '100%',
-          height: '200px',
-          background: '#333',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        [ Graph for {topicId} will go here ]
-      </div>
+      <div className={styles.graphContainer}>[ Graph for {topicId} will go here ]</div>
     </div>
   );
 };

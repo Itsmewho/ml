@@ -13,7 +13,7 @@ const Header = () => {
           <Tooltip tooltipText="Search" position="right">
             <div>search</div>
           </Tooltip>
-          <Tooltip tooltipText="Menu" position="left">
+          <Tooltip tooltipText="Menu Will remove or make later" position="left">
             <div className={styles.navIcon}></div>
           </Tooltip>
         </div>

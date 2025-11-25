@@ -9,7 +9,9 @@ const TopicMenu = ({ category, activeTopicId, onSelectTopic }) => {
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.header}>{APP_DATA[category].label}</h3>
+      <div className={styles.headerContainer}>
+        <h3 className={styles.header}>{APP_DATA[category].label}</h3>
+      </div>
 
       <div className={styles.list}>
         {currentTopics.map((topic) => (

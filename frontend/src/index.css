@@ -5,7 +5,7 @@
   /* -----colors----- */
 
   --clr-white: hsl(0, 0%, 85%);
-  --clr-background: hsl(207, 95%, 8%);
+  --clr-background: hsl(207, 93%, 6%);
   --clr-blue: hsl(216, 100%, 33%);
   --clr-red: hsl(1, 83%, 63%);
   --clr-orange: hsl(46, 37%, 63%);
@@ -14,7 +14,6 @@
   --clr-grey: hsl(224, 39%, 11%);
   --clr-lightgrey: hsl(189, 78%, 14%);
   --clr-bordercolor: hsla(215, 63%, 51%, 0.34);
-  --clr-userscreens: hsl(206, 93%, 6%);
 
   /* ----font-sizes--- */
 
@@ -89,7 +88,7 @@ body {
 }
 
 main {
-  height: 90.2vh;
+  height: 89.5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

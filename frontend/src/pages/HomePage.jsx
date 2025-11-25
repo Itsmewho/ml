@@ -20,24 +20,20 @@ function HomePage() {
   return (
     <div className={style.homeContainer}>
       <div className={style.homeGrid}>
-        <div className={style.gridMain}>
-          <div className={style.subGrid}>
-            <div className={style.panel}>
-              {/* Top Left: Visuals (TrendWindow) */}
-              <div className={style.visualsWindow}>
-                <VisualsWindow topicId={selectedTopicId} />
-              </div>
-            </div>
-            <div className={style.panel}>
-              {/* Bottom Left: Fundamentals (ModelWindow) */}
-              <div className={style.fundamentalsWindow}>
-                <FundamentalsWindow topicId={selectedTopicId} />
-              </div>
-            </div>
+        <div className={style.panelTop}>
+          {/* Top Left: Visuals (TrendWindow) */}
+          <div className={style.visualsWindow}>
+            <VisualsWindow topicId={selectedTopicId} />
+          </div>
+        </div>
+        <div className={style.panel}>
+          {/* Bottom Left: Fundamentals*/}
+          <div className={style.fundamentalsWindow}>
+            <FundamentalsWindow topicId={selectedTopicId} />
           </div>
         </div>
         <div className={style.gridSubMenu}>
-          {/* Middle Column: Topic List (DataWindow) */}
+          {/* Middle Column: Topic List */}
           <div className={style.topicWindow}>
             <TopicMenu
               category={selectedCategory}
