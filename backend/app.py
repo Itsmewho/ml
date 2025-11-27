@@ -31,5 +31,4 @@ def home():
 
 
 if __name__ == "__main__":
-    # We run on port 5000, just as we defined in the Vite proxy
     app.run(debug=True, port=5000, use_reloader=False)

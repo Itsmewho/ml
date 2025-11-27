@@ -5,6 +5,7 @@ import { APP_DATA } from '../../data/topicData';
 import Tooltip from '../Tooltip/Tooltip';
 
 const SideMenu = ({ activeCategory, onSelectCategory }) => {
+  // State to track which icon is currently being hovered
   const [hoveredKey, setHoveredKey] = useState(null);
 
   return (

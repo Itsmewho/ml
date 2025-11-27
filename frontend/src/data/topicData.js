@@ -1,4 +1,4 @@
-// 1. Import the SVG assets directly
+// TopicData
 import mathDefault from '../assets/menu/flask-conical.svg';
 import mathActive from '../assets/menu/flask-conicalGreen.svg';
 
@@ -25,9 +25,18 @@ export const APP_DATA = {
       active: mathActive,
     },
     topics: [
-      { id: 'sigmoid', label: 'Sigmoid Function' },
-      { id: 'relu', label: 'ReLU Activation' },
-      { id: 'dotproduct', label: 'Dot Product' },
+      {
+        id: 'sigmoid',
+        label: 'Sigmoid Function',
+      },
+      {
+        id: 'relu',
+        label: 'ReLU Activation',
+      },
+      {
+        id: 'dotproduct',
+        label: 'Dot Product',
+      },
     ],
   },
   ml: {
@@ -37,8 +46,14 @@ export const APP_DATA = {
       active: mlActive,
     },
     topics: [
-      { id: 'linear_reg', label: 'Linear Regression' },
-      { id: 'knn', label: 'K-Nearest Neighbors' },
+      {
+        id: 'linear_reg',
+        label: 'Linear Regression',
+      },
+      {
+        id: 'knn',
+        label: 'K-Nearest Neighbors',
+      },
     ],
   },
   dl: {
@@ -47,7 +62,12 @@ export const APP_DATA = {
       default: dlDefault,
       active: dlActive,
     },
-    topics: [{ id: 'perceptron', label: 'Perceptron' }],
+    topics: [
+      {
+        id: 'perceptron',
+        label: 'Perceptron',
+      },
+    ],
   },
   rl: {
     label: 'Reinforcement',
@@ -55,22 +75,37 @@ export const APP_DATA = {
       default: rlDefault,
       active: rlActive,
     },
-    topics: [{ id: 'perceptron', label: 'Perceptron' }],
+    topics: [
+      {
+        id: 'rl_intro', // Changed ID to be unique
+        label: 'RL Introduction',
+      },
+    ],
   },
   ul: {
-    label: 'unsupervised',
+    label: 'Unsupervised',
     icons: {
       default: ulDefault,
       active: ulActive,
     },
-    topics: [{ id: 'perceptron', label: 'Perceptron' }],
+    topics: [
+      {
+        id: 'clustering', // Changed ID to be unique
+        label: 'K-Means Clustering',
+      },
+    ],
   },
   sl: {
-    label: 'supervised',
+    label: 'Supervised',
     icons: {
       default: slDefault,
       active: slActive,
     },
-    topics: [{ id: 'perceptron', label: 'Perceptron' }],
+    topics: [
+      {
+        id: 'classification', // Changed ID to be unique
+        label: 'Classification',
+      },
+    ],
   },
 };
