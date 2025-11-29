@@ -26,7 +26,7 @@ export const APP_DATA = {
     },
     topics: [
       {
-        id: 'sigmoid',
+        id: 'sigmoid', // UID
         label: 'Sigmoid Function',
       },
       {
@@ -77,7 +77,7 @@ export const APP_DATA = {
     },
     topics: [
       {
-        id: 'rl_intro', // Changed ID to be unique
+        id: 'rl_intro',
         label: 'RL Introduction',
       },
     ],
@@ -90,7 +90,7 @@ export const APP_DATA = {
     },
     topics: [
       {
-        id: 'clustering', // Changed ID to be unique
+        id: 'clustering',
         label: 'K-Means Clustering',
       },
     ],
@@ -103,7 +103,7 @@ export const APP_DATA = {
     },
     topics: [
       {
-        id: 'classification', // Changed ID to be unique
+        id: 'classification',
         label: 'Classification',
       },
     ],

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import style from './styles/HomePage.module.css';
-import { APP_DATA } from '../data/topicData';
+import { APP_DATA } from '../config/topicData';
 
 import VisualsWindow from '../components/Visuals/VisualsWindow';
 import FundamentalsWindow from '../components/Fundamentals/FundamentalsWindow';

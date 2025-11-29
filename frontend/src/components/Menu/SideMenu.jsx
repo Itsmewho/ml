@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './styles/side.module.css';
 import PropTypes from 'prop-types';
-import { APP_DATA } from '../../data/topicData';
+import { APP_DATA } from '../../config/topicData';
 import Tooltip from '../Tooltip/Tooltip';
 
 const SideMenu = ({ activeCategory, onSelectCategory }) => {

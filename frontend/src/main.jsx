@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+// Lib css
+import 'mafs/core.css';
+import 'mafs/font.css';
+
 // Context Providers
 import { ToastProvider } from './context/ToastContext.jsx';
 

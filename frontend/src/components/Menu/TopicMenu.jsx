@@ -1,5 +1,5 @@
 import styles from './styles/topic.module.css';
-import { APP_DATA } from '../../data/topicData';
+import { APP_DATA } from '../../config/topicData';
 import PropTypes from 'prop-types';
 
 const TopicMenu = ({ category, activeTopicId, onSelectTopic }) => {
