@@ -26,7 +26,27 @@ export const APP_DATA = {
     },
     topics: [
       {
-        id: 'sigmoid', // UID
+        id: 'linear_function',
+        label: 'Linear Function',
+      },
+      {
+        id: 'linear_regression',
+        label: 'Linear regression',
+      },
+      {
+        id: 'logistic_regression',
+        label: 'Logistic regression',
+      },
+      {
+        id: 'normal_distribution',
+        label: 'Normal distribution',
+      },
+      {
+        id: 'galton_board',
+        label: 'Galton board',
+      },
+      {
+        id: 'sigmoid',
         label: 'Sigmoid Function',
       },
       {
@@ -34,8 +54,76 @@ export const APP_DATA = {
         label: 'ReLU Activation',
       },
       {
-        id: 'dotproduct',
+        id: 'prelu',
+        label: 'PRelu Activation',
+      },
+      {
+        id: 'elu',
+        label: 'Exponentially linear units',
+      },
+      {
+        id: 'glu',
+        label: 'gated linear units',
+      },
+      {
+        id: 'swish_activation',
+        label: 'Swish Activation',
+      },
+      {
+        id: 'mish_activation',
+        label: 'Mish Activation',
+      },
+      {
+        id: 'tanh_activation',
+        label: 'Tanh Activation',
+      },
+      {
+        id: 'dot_product',
         label: 'Dot Product',
+      },
+      {
+        id: 'gradient_decent',
+        label: 'Gradient decent',
+      },
+      {
+        id: 'mse',
+        label: 'Mean squared error',
+      },
+      {
+        id: 'mea',
+        label: 'L1 loss',
+      },
+      {
+        id: 'huberloss',
+        label: 'Huberloss',
+      },
+      {
+        id: 'binary_cross_entropy_loss',
+        label: 'Binary cross',
+      },
+      {
+        id: 'cross_entropy_loss',
+        label: 'Cross entropy loss',
+      },
+      {
+        id: 'softmax',
+        label: 'Softmax',
+      },
+      {
+        id: 'contrastive_loss',
+        label: 'Contrastive loss',
+      },
+      {
+        id: 'hinge_loss',
+        label: 'Hinge loss',
+      },
+      {
+        id: 'markov_chain',
+        label: 'markov',
+      },
+      {
+        id: 'claude_shannon',
+        label: 'claude & markov',
       },
     ],
   },
