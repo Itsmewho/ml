@@ -1,8 +1,29 @@
 .fundamentalContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+  gap: 1rem;
   color: var(--clr-white);
 }
 
 .ControlPanel {
   width: 100%;
-  border: 1px solid red;
+}
+
+.explanationSection {
+  width: 75%;
+}
+.controlsSection {
+  width: 25%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.divider {
+  border: 1px solid var(--clr-bordercolor);
+  margin: 0.5rem 0;
+  display: flex;
+  flex-grow: 1;
 }

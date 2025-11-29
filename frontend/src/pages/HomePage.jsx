@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import style from './styles/HomePage.module.css';
 import { APP_DATA } from '../config/topicData';
+import { TOPIC_REGISTRY } from '../config/topicRegistry';
 
 import VisualsWindow from '../components/Visuals/VisualsWindow';
 import FundamentalsWindow from '../components/Fundamentals/FundamentalsWindow';
@@ -10,40 +11,64 @@ import SideMenu from '../components/Menu/SideMenu';
 function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState('math');
 
-  const [selectedTopicId, setSelectedTopicId] = useState(APP_DATA['math'].topics[0].id);
+  // Initialize state based on the default topic
+  const defaultTopicId = APP_DATA['math'].topics[0].id;
+  const defaultRegistry = TOPIC_REGISTRY[defaultTopicId];
 
+  const [selectedTopicId, setSelectedTopicId] = useState(defaultTopicId);
+  const [params, setParams] = useState(
+    defaultRegistry ? defaultRegistry.initialParams : {},
+  );
+
+  // 1. SMART HANDLER:
+  const handleTopicChange = (newTopicId) => {
+    setSelectedTopicId(newTopicId);
+
+    // Look up new params immediately
+    const config = TOPIC_REGISTRY[newTopicId];
+    setParams(config ? config.initialParams : {});
+  };
+
+  // 2. SMART HANDLER:
   const handleCategoryChange = (categoryKey) => {
     setSelectedCategory(categoryKey);
-    setSelectedTopicId(APP_DATA[categoryKey].topics[0].id);
+
+    // Find the first topic of this new category
+    const firstTopicId = APP_DATA[categoryKey].topics[0].id;
+    setSelectedTopicId(firstTopicId);
+
+    // Set params for that first topic
+    const config = TOPIC_REGISTRY[firstTopicId];
+    setParams(config ? config.initialParams : {});
   };
 
   return (
     <div className={style.homeContainer}>
       <div className={style.homeGrid}>
         <div className={style.panelTop}>
-          {/* Top Left: Visuals (TrendWindow) */}
           <div className={style.visualsWindow}>
-            <VisualsWindow topicId={selectedTopicId} />
+            <VisualsWindow topicId={selectedTopicId} params={params} />
           </div>
         </div>
         <div className={style.panel}>
-          {/* Bottom Left: Fundamentals*/}
           <div className={style.fundamentalsWindow}>
-            <FundamentalsWindow topicId={selectedTopicId} />
+            <FundamentalsWindow
+              topicId={selectedTopicId}
+              params={params}
+              setParams={setParams}
+            />
           </div>
         </div>
         <div className={style.gridSubMenu}>
-          {/* Middle Column: Topic List */}
           <div className={style.topicWindow}>
             <TopicMenu
               category={selectedCategory}
               activeTopicId={selectedTopicId}
-              onSelectTopic={setSelectedTopicId}
+              onSelectTopic={handleTopicChange}
             />
           </div>
         </div>
         <div className={style.gridMenu}>
-          {/* Right Column: Main Icons (SideMenu) */}
           <div className={style.sideMenu}>
             <SideMenu
               activeCategory={selectedCategory}

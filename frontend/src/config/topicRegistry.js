@@ -1,22 +1,43 @@
-// Import your topic components
-import NormalVisual from '../topics/math/normalDistribution/NormalVisual';
-import NormalControls from '../topics/math/normalDistribution/NormalControls';
+// 1. Import topics
+import NormalVisual from '../data/math/normalDistribution/NormalVisual';
+import NormalControls from '../data/math/normalDistribution/NormalControls';
 
-// You can create a default "Not Found" component too
-const DefaultVisual = () => <div>Select a topic</div>;
-const DefaultControls = () => <div>No controls available</div>;
+import SigmoidVisual from '../data/math/sigmoid/SigmoidVisual';
+import SigmoidControls from '../data/math/sigmoid/SigmoidControls';
+import SigmoidExplanation from '../data/math/sigmoid/SigmoidExplanation';
+
+// 2. Import the Placeholders
+import {
+  DefaultVisual,
+  DefaultControls,
+  DefaultExplanation,
+} from '../components/Defaults/Placeholders';
 
 export const TOPIC_REGISTRY = {
-  // Matches the ID in APP_DATA
+  // --- Active Topics ---
   normal_dist: {
     visual: NormalVisual,
     controls: NormalControls,
     initialParams: { mean: 0, stdDev: 1 },
   },
   sigmoid: {
-    visual: DefaultVisual, // Placeholder until you build it
+    visual: SigmoidVisual,
+    controls: SigmoidControls,
+    explanation: SigmoidExplanation,
+    initialParams: { steepness: 1, midpoint: 0 },
+  },
+
+  // --- Placeholders / Future Topics ---
+  relu: {
+    visual: DefaultVisual,
     controls: DefaultControls,
+    explanation: DefaultExplanation,
     initialParams: {},
   },
-  // Add new topics here as you build them
+  dotproduct: {
+    visual: DefaultVisual,
+    controls: DefaultControls,
+    explanation: DefaultExplanation,
+    initialParams: {},
+  },
 };

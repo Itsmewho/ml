@@ -11,8 +11,8 @@
   --clr-orange: hsl(46, 37%, 63%);
   --clr-green: hsl(174, 63%, 40%);
   --clr-boxcolor: hsl(209, 100%, 8%);
-  --clr-grey: hsl(224, 39%, 11%);
-  --clr-lightgrey: hsl(189, 78%, 14%);
+  --clr-grey: hsl(0, 0%, 28%);
+  --clr-lightgrey: hsl(0, 0%, 50%);
   --clr-bordercolor: hsla(215, 63%, 51%, 0.34);
 
   /* ----font-sizes--- */
@@ -146,6 +146,9 @@ a {
 .blue {
   color: var(--clr-blue);
 }
+.grey {
+  color: var(--clr-lightgrey);
+}
 .boxcolor {
   color: var(--clr-boxcolor);
 }
@@ -192,6 +195,13 @@ a {
 }
 .fs-200 {
   font-size: var(--fs-200);
+}
+.lineheight {
+  line-height: 1.5;
+}
+
+.margintop {
+  margin-top: 3px;
 }
 
 /* ------------------- */
