@@ -12,7 +12,7 @@ const SigmoidExplanation = () => {
       <h3 className="ff-serif fs-400 lineheight">Why is it used?</h3>
       <p className="ff-sans fs-300 grey margintop">
         It not only converts numbers into probabilities in ML, a model often calculates a
-        `&apos`raw score`&apos`(called a logit) that can range from minus infiniti to plus
+        &apos;raw score&apos; (called a logit) that can range from minus infiniti to plus
         inf. This isnt usefull for making a decision. The sigmoid function converts that
         raw score into a range of 0 to 1, with can be inerpret as a propability.
       </p>

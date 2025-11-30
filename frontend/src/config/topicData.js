@@ -54,16 +54,12 @@ export const APP_DATA = {
         label: 'ReLU Activation',
       },
       {
-        id: 'prelu',
-        label: 'PRelu Activation',
-      },
-      {
         id: 'elu',
         label: 'Exponentially linear units',
       },
       {
         id: 'glu',
-        label: 'gated linear units',
+        label: 'Gated linear units',
       },
       {
         id: 'swish_activation',
@@ -118,12 +114,24 @@ export const APP_DATA = {
         label: 'Hinge loss',
       },
       {
+        id: 'convolution',
+        label: 'Convolution',
+      },
+      {
+        id: 'correlation',
+        label: 'Correlation',
+      },
+      {
+        id: 'convolution_vs_correlation',
+        label: 'Convolution & Correlation',
+      },
+      {
         id: 'markov_chain',
-        label: 'markov',
+        label: 'Markov',
       },
       {
         id: 'claude_shannon',
-        label: 'claude & markov',
+        label: 'Claude & markov',
       },
     ],
   },
