@@ -24,6 +24,16 @@ import ReluControls from '../data/math/relu/ReluControls';
 import ReluVisual from '../data/math/relu/ReluVisual';
 import ReluExplanation from '../data/math/relu/ReluExplanation';
 
+// ELU
+import EluControls from '../data/math/elu/EluControls';
+import EluVisual from '../data/math/elu/EluVisual';
+import EluExplanation from '../data/math/elu/EluExplanation';
+
+// Tanh
+import TanhVisual from '../data/math/tanh/TanhVisual';
+import TanhControls from '../data/math/tanh/TanhControls';
+import TanhExplanation from '../data/math/tanh/TanhExplanation';
+
 export const TOPIC_REGISTRY = {
   // --- Active Topics ---
   normal_dist: {
@@ -48,6 +58,18 @@ export const TOPIC_REGISTRY = {
     controls: ReluControls,
     explanation: ReluExplanation,
     initialParams: { leak: 0 },
+  },
+  tanh_activation: {
+    visual: TanhVisual,
+    controls: TanhControls,
+    explanation: TanhExplanation,
+    initialParams: { steepness: 1 },
+  },
+  elu: {
+    visual: EluVisual,
+    controls: EluControls,
+    explanation: EluExplanation,
+    initialParams: { alpha: 1.0 },
   },
 
   // --- Placeholders / Future Topics ---

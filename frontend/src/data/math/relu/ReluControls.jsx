@@ -27,7 +27,7 @@ const ReluControls = ({ params, setParams }) => {
         <input
           type="range"
           name="leak"
-          min="-1"
+          min="0"
           max="1"
           step="0.01"
           value={params.leak}
