@@ -78,8 +78,8 @@ export const APP_DATA = {
         label: 'Dot Product',
       },
       {
-        id: 'gradient_decent',
-        label: 'Gradient decent',
+        id: 'gradient_descent',
+        label: 'Gradient descent',
       },
       {
         id: 'mse',

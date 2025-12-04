@@ -1,23 +1,32 @@
-import { Mafs, Coordinates, Plot, Theme } from 'mafs';
+import { Mafs, Coordinates, Plot, Theme, Text } from 'mafs';
 import PropTypes from 'prop-types';
 
-const normalDistribution = (x, mu, sigma) => {
-  const coefficient = 1 / (sigma * Math.sqrt(2 * Math.PI));
-  const exponent = -0.5 * Math.pow((x - mu) / sigma, 2);
-  return coefficient * Math.exp(exponent);
+const normalDist = (x, mean, stdDev) => {
+  const variance = stdDev * stdDev;
+  const scale = 1 / (stdDev * Math.sqrt(2 * Math.PI));
+  const exponent = -Math.pow(x - mean, 2) / (2 * variance);
+  return scale * Math.exp(exponent);
 };
 
-// This component only cares about receiving 'params'
 const NormalVisual = ({ params }) => {
   const { mean, stdDev } = params;
+
   return (
-    <Mafs zoom={true} pan={true} height={300}>
+    <Mafs zoom={true} pan={true} height={550} viewBox={{ x: [-5, 5], y: [-0.5, 1.5] }}>
       <Coordinates.Cartesian />
+
+      {/* The Bell Curve */}
+      <Plot.OfX y={(x) => normalDist(x, mean, stdDev)} color={Theme.indigo} weight={3} />
+
+      {/* Marker for the Mean (Center) */}
       <Plot.OfX
-        y={(x) => normalDistribution(x, mean, stdDev)}
-        color={Theme.blue}
-        weight={3}
+        y={() => 0} // Just a hack to draw a line? No, let's use Line.Segment if needed.
+        // Or just let the peak speak for itself.
       />
+
+      <Text x={mean} y={normalDist(mean, mean, stdDev) + 0.1} color={Theme.indigo}>
+        μ
+      </Text>
     </Mafs>
   );
 };

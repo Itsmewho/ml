@@ -1,6 +1,7 @@
 // 1. Import topics
 import NormalVisual from '../data/math/normalDistribution/NormalVisual';
 import NormalControls from '../data/math/normalDistribution/NormalControls';
+import NormalExplanation from '../data/math/normalDistribution/NormalExplanation';
 
 // LinearFunction
 import LinearControls from '../data/math/linearFunction/LinearControls';
@@ -47,11 +48,17 @@ import LinearRegressionControls from '../data/math/linearFunction/LinearControls
 import LinearRegressionExplanation from '../data/math/linearRegression/LinearRegExpl';
 import LinearRegressionVisual from '../data/math/linearRegression/LinearRegVisual';
 
+//logReg
+import LogisticControls from '../data/math/LogRegControls';
+import LogisticVisual from '../data/math/LogRegVisual';
+import LogisticExplanation from '../data/math/LogRegExpl';
+
 export const TOPIC_REGISTRY = {
   // --- Active Topics ---
-  normal_dist: {
+  normal_distribution: {
     visual: NormalVisual,
     controls: NormalControls,
+    explanation: NormalExplanation,
     initialParams: { mean: 0, stdDev: 1 },
   },
   sigmoid: {
@@ -108,6 +115,12 @@ export const TOPIC_REGISTRY = {
     visual: LinearRegressionVisual,
     controls: LinearRegressionControls,
     explanation: LinearRegressionExplanation,
+    initialParams: { slope: 1, intercept: 0 },
+  },
+  logistic_regression: {
+    visual: LogisticVisual,
+    controls: LogisticControls,
+    explanation: LogisticExplanation,
     initialParams: { slope: 1, intercept: 0 },
   },
 };

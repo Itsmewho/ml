@@ -7,39 +7,46 @@ const NormalControls = ({ params, setParams }) => {
   };
 
   return (
-    <div>
-      <label>Mean: {params.mean}</label>
-      <input
-        type="range"
-        name="mean"
-        min="-5"
-        max="5"
-        step="0.1"
-        value={params.mean}
-        onChange={handleChange}
-      />
+    <div className="controls-content">
+      <div style={{ marginBottom: '1rem' }}>
+        <label>Mean (mu): {params.mean}</label>
+        <input
+          type="range"
+          name="mean"
+          min="-3"
+          max="3"
+          step="0.1"
+          value={params.mean}
+          onChange={handleChange}
+          style={{ width: '100%' }}
+        />
+        <p style={{ fontSize: '0.8rem', color: '#666', marginTop: 0 }}>
+          Shifts the center left or right.
+        </p>
+      </div>
 
-      <br />
-
-      <label>Std Dev: {params.stdDev}</label>
-      <input
-        type="range"
-        name="stdDev"
-        min="0.1"
-        max="3"
-        step="0.1"
-        value={params.stdDev}
-        onChange={handleChange}
-      />
+      <div style={{ marginBottom: '1rem' }}>
+        <label>Standard Deviation (sigma): {params.stdDev}</label>
+        <input
+          type="range"
+          name="stdDev"
+          min="0.2"
+          max="2.0"
+          step="0.1"
+          value={params.stdDev}
+          onChange={handleChange}
+          style={{ width: '100%' }}
+        />
+        <p style={{ fontSize: '0.8rem', color: '#666', marginTop: 0 }}>
+          Controls the width (spread). Lower = Sharper peak.
+        </p>
+      </div>
     </div>
   );
 };
 
 NormalControls.propTypes = {
-  params: PropTypes.shape({
-    mean: PropTypes.number,
-    stdDev: PropTypes.number,
-  }).isRequired,
+  params: PropTypes.object.isRequired,
   setParams: PropTypes.func.isRequired,
 };
 
