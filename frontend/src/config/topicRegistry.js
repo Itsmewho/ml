@@ -42,6 +42,11 @@ import DotProductControls from '../data/math/dotproduct/DotProductControls';
 import DotProductVisual from '../data/math/dotproduct/DotProductVisual';
 import DotProductExplanation from '../data/math/dotproduct/DotProductExplanation';
 
+//LinReg
+import LinearRegressionControls from '../data/math/linearFunction/LinearControls';
+import LinearRegressionExplanation from '../data/math/linearRegression/LinearRegExpl';
+import LinearRegressionVisual from '../data/math/linearRegression/LinearRegVisual';
+
 export const TOPIC_REGISTRY = {
   // --- Active Topics ---
   normal_dist: {
@@ -98,5 +103,11 @@ export const TOPIC_REGISTRY = {
     controls: DotProductControls,
     explanation: DotProductExplanation,
     initialParams: { x1: 2, y1: 1, x2: 1, y2: 2 },
+  },
+  linear_regression: {
+    visual: LinearRegressionVisual,
+    controls: LinearRegressionControls,
+    explanation: LinearRegressionExplanation,
+    initialParams: { slope: 1, intercept: 0 },
   },
 };
