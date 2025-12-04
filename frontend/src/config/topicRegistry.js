@@ -2,13 +2,6 @@
 import NormalVisual from '../data/math/normalDistribution/NormalVisual';
 import NormalControls from '../data/math/normalDistribution/NormalControls';
 
-// 2. Import the Placeholders
-import {
-  DefaultVisual,
-  DefaultControls,
-  DefaultExplanation,
-} from '../components/Defaults/Placeholders';
-
 // LinearFunction
 import LinearControls from '../data/math/linearFunction/LinearControls';
 import LinearExplanation from '../data/math/linearFunction/LinearExplanation';
@@ -33,6 +26,21 @@ import EluExplanation from '../data/math/elu/EluExplanation';
 import TanhVisual from '../data/math/tanh/TanhVisual';
 import TanhControls from '../data/math/tanh/TanhControls';
 import TanhExplanation from '../data/math/tanh/TanhExplanation';
+
+//Swish
+import SwishControls from '../data/math/swish/SwishControls';
+import SwishExplanation from '../data/math/swish/SwishExplanation';
+import SwishVisual from '../data/math/swish/SwishVisual';
+
+//Mish
+import MishControls from '../data/math/mish/MishControls';
+import MishExplanation from '../data/math/mish/MishExplanation';
+import MishVisual from '../data/math/mish/MishVisual';
+
+//DotProduct
+import DotProductControls from '../data/math/dotproduct/DotProductControls';
+import DotProductVisual from '../data/math/dotproduct/DotProductVisual';
+import DotProductExplanation from '../data/math/dotproduct/DotProductExplanation';
 
 export const TOPIC_REGISTRY = {
   // --- Active Topics ---
@@ -71,12 +79,24 @@ export const TOPIC_REGISTRY = {
     explanation: EluExplanation,
     initialParams: { alpha: 1.0 },
   },
+  swish_activation: {
+    visual: SwishVisual,
+    controls: SwishControls,
+    explanation: SwishExplanation,
+    initialParams: { beta: 1 },
+  },
 
-  // --- Placeholders / Future Topics ---
-  dotproduct: {
-    visual: DefaultVisual,
-    controls: DefaultControls,
-    explanation: DefaultExplanation,
-    initialParams: {},
+  mish_activation: {
+    visual: MishVisual,
+    controls: MishControls,
+    explanation: MishExplanation,
+    initialParams: {}, // No params for Mish
+  },
+
+  dot_product: {
+    visual: DotProductVisual,
+    controls: DotProductControls,
+    explanation: DotProductExplanation,
+    initialParams: { x1: 2, y1: 1, x2: 1, y2: 2 },
   },
 };
