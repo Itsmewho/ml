@@ -10,12 +10,12 @@
   font-size: var(--fs-400);
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 .headerContainer {
   width: 100%;
   border-bottom: 1px solid var(--clr-bordercolor);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .list {

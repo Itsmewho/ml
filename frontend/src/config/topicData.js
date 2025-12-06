@@ -42,10 +42,6 @@ export const APP_DATA = {
         label: 'Normal distribution',
       },
       {
-        id: 'galton_board',
-        label: 'Galton board',
-      },
-      {
         id: 'sigmoid',
         label: 'Sigmoid Function',
       },
@@ -86,7 +82,7 @@ export const APP_DATA = {
         label: 'Mean squared error',
       },
       {
-        id: 'mea',
+        id: 'mae',
         label: 'L1 loss',
       },
       {
@@ -132,6 +128,14 @@ export const APP_DATA = {
       {
         id: 'claude_shannon',
         label: 'Claude & markov',
+      },
+      {
+        id: 'Euler_function',
+        label: 'Euler function',
+      },
+      {
+        id: 'Bayes_theorem',
+        label: 'Bayes theorem',
       },
     ],
   },

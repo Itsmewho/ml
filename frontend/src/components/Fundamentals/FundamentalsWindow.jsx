@@ -11,7 +11,11 @@ const FundamentalsWindow = ({ topicId, params, setParams }) => {
     <div className={styles.fundamentalContainer}>
       {/* Section 1: The Explanation */}
       <div className={styles.explanationSection}>
-        {SpecificExplanation ? <SpecificExplanation /> : <p>No info available.</p>}
+        {SpecificExplanation ? (
+          <SpecificExplanation params={params} />
+        ) : (
+          <p>No info available.</p>
+        )}
       </div>
 
       <hr className={styles.divider} />

@@ -49,9 +49,24 @@ import LinearRegressionExplanation from '../data/math/linearRegression/LinearReg
 import LinearRegressionVisual from '../data/math/linearRegression/LinearRegVisual';
 
 //logReg
-import LogisticControls from '../data/math/LogRegControls';
-import LogisticVisual from '../data/math/LogRegVisual';
-import LogisticExplanation from '../data/math/LogRegExpl';
+import LogisticControls from '../data/math/logisticRegression/LogRegControls';
+import LogisticVisual from '../data/math/logisticRegression/LogRegVisual';
+import LogisticExplanation from '../data/math/logisticRegression/LogRegExpl';
+
+//GredientDescent
+import GradientDescentControls from '../data/math/gradientDescent/GradientDescentControls';
+import GradientDescentExplanation from '../data/math/gradientDescent/GradientDecentExplanation';
+import GradientDescentVisual from '../data/math/gradientDescent/GradientDescentVisual';
+
+//Losses
+import LossControls from '../data/math/loss/LossControls';
+import LossExplanation from '../data/math/loss/LossExplanation';
+import LossVisual from '../data/math/loss/LossVisual';
+
+//Softmax
+import SoftmaxControls from '../data/math/softmax/SoftmaxControls';
+import SoftmaxVisual from '../data/math/softmax/SoftmaxVisual';
+import SoftmaxExplanation from '../data/math/softmax/SoftmaxExplanation';
 
 export const TOPIC_REGISTRY = {
   // --- Active Topics ---
@@ -122,5 +137,35 @@ export const TOPIC_REGISTRY = {
     controls: LogisticControls,
     explanation: LogisticExplanation,
     initialParams: { slope: 1, intercept: 0 },
+  },
+  gradient_descent: {
+    visual: GradientDescentVisual,
+    controls: GradientDescentControls,
+    explanation: GradientDescentExplanation,
+    initialParams: { position: 2, learningRate: 0.2 },
+  },
+  mse: {
+    visual: LossVisual,
+    controls: LossControls,
+    explanation: LossExplanation,
+    initialParams: { errorVal: 2, type: 'mse' },
+  },
+  mae: {
+    visual: LossVisual,
+    controls: LossControls,
+    explanation: LossExplanation,
+    initialParams: { errorVal: 2, type: 'mae' },
+  },
+  huberloss: {
+    visual: LossVisual,
+    controls: LossControls,
+    explanation: LossExplanation,
+    initialParams: { errorVal: 2, type: 'huberloss', delta: 1.0 },
+  },
+  softmax: {
+    visual: SoftmaxVisual,
+    controls: SoftmaxControls,
+    explanation: SoftmaxExplanation,
+    initialParams: { val1: 2, val2: 1, val3: 0.5 },
   },
 };
