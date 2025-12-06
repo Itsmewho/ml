@@ -78,8 +78,22 @@ import BCEControls from '../data/math/binaryCrossEntropy/BCEControls';
 import BCEExplanation from '../data/math/binaryCrossEntropy/BCEExplanation';
 import BCEVisual from '../data/math/binaryCrossEntropy/BCEVisual';
 
+//Hinge
+import HingeControls from '../data/math/hingeLoss/HingeControls';
+import HingeExplanation from '../data/math/hingeLoss/HingeExplanation';
+import HingeVisual from '../data/math/hingeLoss/HingeVisual';
+
+//Convolution
+import ConvolutionControls from '../data/math/convolution/ConvoControls';
+import ConvolutionExplanation from '../data/math/convolution/ConvoExplanation';
+import ConvolutionVisual from '../data/math/convolution/ConvoVisual';
+
+//Correlation
+import CorrelationControls from '../data/math/correlation/CorControls';
+import CorrelationVisual from '../data/math/correlation/CorVisual';
+import CorrelationExplanation from '../data/math/correlation/CorExplanation';
+
 export const TOPIC_REGISTRY = {
-  // --- Active Topics ---
   normal_distribution: {
     visual: NormalVisual,
     controls: NormalControls,
@@ -189,5 +203,35 @@ export const TOPIC_REGISTRY = {
     controls: BCEControls,
     explanation: BCEExplanation,
     initialParams: { pred: 0.5, truth: 1 },
+  },
+  hinge_loss: {
+    visual: HingeVisual,
+    controls: HingeControls,
+    explanation: HingeExplanation,
+    initialParams: { pred: 0.5, truth: 1 },
+  },
+  convolution: {
+    visual: ConvolutionVisual,
+    controls: ConvolutionControls,
+    explanation: ConvolutionExplanation,
+    // Default: A simple edge detection example
+    // Input: 0,0,1,1 (Step up)
+    // Kernel: -1, 1 (Find changes)
+    initialParams: {
+      input: [1, 1, 1, 0, 0, 0],
+      kernel: [1, -1],
+      step: 0,
+    },
+  },
+  correlation: {
+    visual: CorrelationVisual,
+    controls: CorrelationControls,
+    explanation: CorrelationExplanation,
+    // Example: Searching for the number 5
+    initialParams: {
+      input: [1, 0, 5, 0, 1, 0],
+      kernel: [5],
+      step: 0,
+    },
   },
 };

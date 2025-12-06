@@ -54,10 +54,6 @@ export const APP_DATA = {
         label: 'Exponentially linear units',
       },
       {
-        id: 'glu',
-        label: 'Gated linear units',
-      },
-      {
         id: 'swish_activation',
         label: 'Swish Activation',
       },
@@ -102,10 +98,6 @@ export const APP_DATA = {
         label: 'Softmax',
       },
       {
-        id: 'contrastive_loss',
-        label: 'Contrastive loss',
-      },
-      {
         id: 'hinge_loss',
         label: 'Hinge loss',
       },
@@ -118,16 +110,12 @@ export const APP_DATA = {
         label: 'Correlation',
       },
       {
-        id: 'convolution_vs_correlation',
-        label: 'Convolution & Correlation',
-      },
-      {
         id: 'markov_chain',
         label: 'Markov',
       },
       {
         id: 'claude_shannon',
-        label: 'Claude & markov',
+        label: 'Claude shannon',
       },
       {
         id: 'Euler_function',
