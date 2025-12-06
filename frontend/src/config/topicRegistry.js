@@ -1,4 +1,4 @@
-// 1. Import topics
+//Import topics
 import NormalVisual from '../data/math/normalDistribution/NormalVisual';
 import NormalControls from '../data/math/normalDistribution/NormalControls';
 import NormalExplanation from '../data/math/normalDistribution/NormalExplanation';
@@ -67,6 +67,16 @@ import LossVisual from '../data/math/loss/LossVisual';
 import SoftmaxControls from '../data/math/softmax/SoftmaxControls';
 import SoftmaxVisual from '../data/math/softmax/SoftmaxVisual';
 import SoftmaxExplanation from '../data/math/softmax/SoftmaxExplanation';
+
+//CrossEntropy
+import CrossEntropyControls from '../data/math/crossEntropy/CrossEntropyControls';
+import CrossEntropyExplanation from '../data/math/crossEntropy/CrossEntropyExplanation';
+import CrossEntropyVisual from '../data/math/crossEntropy/CrossEntroyVisual';
+
+//BCE
+import BCEControls from '../data/math/binaryCrossEntropy/BCEControls';
+import BCEExplanation from '../data/math/binaryCrossEntropy/BCEExplanation';
+import BCEVisual from '../data/math/binaryCrossEntropy/BCEVisual';
 
 export const TOPIC_REGISTRY = {
   // --- Active Topics ---
@@ -167,5 +177,17 @@ export const TOPIC_REGISTRY = {
     controls: SoftmaxControls,
     explanation: SoftmaxExplanation,
     initialParams: { val1: 2, val2: 1, val3: 0.5 },
+  },
+  cross_entropy_loss: {
+    visual: CrossEntropyVisual,
+    controls: CrossEntropyControls,
+    explanation: CrossEntropyExplanation,
+    initialParams: { probability: 0.5 },
+  },
+  binary_cross_entropy_loss: {
+    visual: BCEVisual,
+    controls: BCEControls,
+    explanation: BCEExplanation,
+    initialParams: { pred: 0.5, truth: 1 },
   },
 };

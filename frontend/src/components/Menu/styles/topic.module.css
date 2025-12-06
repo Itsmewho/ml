@@ -15,12 +15,13 @@
 .headerContainer {
   width: 100%;
   border-bottom: 1px solid var(--clr-bordercolor);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .list {
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
   gap: 2px;
 }
 
