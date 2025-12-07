@@ -93,6 +93,16 @@ import CorrelationControls from '../data/math/correlation/CorControls';
 import CorrelationVisual from '../data/math/correlation/CorVisual';
 import CorrelationExplanation from '../data/math/correlation/CorExplanation';
 
+//Shannon
+import ShannonControls from '../data/math/shannon/ShannonControls';
+import ShannonExplanation from '../data/math/shannon/ShannonExplanation';
+import ShannonVisual from '../data/math/shannon/ShannonVisual';
+
+//Bayes
+import BayesControls from '../data/math/bayes/BayesControls';
+import BayesVisual from '../data/math/bayes/BayesVisual';
+import BayesExplanation from '../data/math/bayes/BayesExplanation';
+
 export const TOPIC_REGISTRY = {
   normal_distribution: {
     visual: NormalVisual,
@@ -214,14 +224,17 @@ export const TOPIC_REGISTRY = {
     visual: ConvolutionVisual,
     controls: ConvolutionControls,
     explanation: ConvolutionExplanation,
-    // Default: A simple edge detection example
-    // Input: 0,0,1,1 (Step up)
-    // Kernel: -1, 1 (Find changes)
     initialParams: {
       input: [1, 1, 1, 0, 0, 0],
       kernel: [1, -1],
       step: 0,
     },
+  },
+  claude_shannon: {
+    visual: ShannonVisual,
+    controls: ShannonControls,
+    explanation: ShannonExplanation,
+    initialParams: { text: 'Press a button...', level: -1 },
   },
   correlation: {
     visual: CorrelationVisual,
@@ -233,5 +246,12 @@ export const TOPIC_REGISTRY = {
       kernel: [5],
       step: 0,
     },
+  },
+  bayes_theorem: {
+    visual: BayesVisual,
+    controls: BayesControls,
+    explanation: BayesExplanation,
+    // Start with a "Paradox" setup: Rare disease, decent test
+    initialParams: { prevalence: 1, sensitivity: 99, specificity: 90 },
   },
 };

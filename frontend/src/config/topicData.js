@@ -110,19 +110,15 @@ export const APP_DATA = {
         label: 'Correlation',
       },
       {
-        id: 'markov_chain',
-        label: 'Markov',
-      },
-      {
         id: 'claude_shannon',
         label: 'Claude shannon',
       },
       {
-        id: 'Euler_function',
+        id: 'euler_function',
         label: 'Euler function',
       },
       {
-        id: 'Bayes_theorem',
+        id: 'bayes_theorem',
         label: 'Bayes theorem',
       },
     ],
