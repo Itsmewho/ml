@@ -1,6 +1,7 @@
 // 1. Import Sub-Registries
 import { MATH_REGISTRY } from './mathRegistry';
 import { ML_REGISTRY } from './mlRegistry';
+import { UL_REGISTRY } from './ulRegistry';
 
 // 2. Import Defaults/Placeholders
 import {
@@ -14,9 +15,10 @@ import {
 const ACTIVE_TOPICS = {
   ...MATH_REGISTRY,
   ...ML_REGISTRY,
+  ...UL_REGISTRY,
 };
 
-// 4. Create a "Fallback" mechanism
+// 4. "Fallback" mechanism
 const createRegistryWithFallbacks = (registry) => {
   return new Proxy(registry, {
     get: (target, prop) => {

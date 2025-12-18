@@ -135,9 +135,19 @@ export const APP_DATA = {
         label: 'Linear Regression',
       },
       {
+        id: 'logistic_regression',
+        label: 'Logistic regression',
+      },
+      {
         id: 'knn',
         label: 'K-Nearest Neighbors',
       },
+      {
+        id: 'svm',
+        label: 'Support Vector Machine',
+      },
+      { id: 'decision_tree', label: 'Decision Tree' },
+      { id: 'random_forest', label: 'Random Forest' },
     ],
   },
   dl: {
@@ -173,10 +183,9 @@ export const APP_DATA = {
       active: ulActive,
     },
     topics: [
-      {
-        id: 'clustering',
-        label: 'K-Means Clustering',
-      },
+      { id: 'kmeans', label: 'K-Means Clustering' },
+      { id: 'pca', label: 'Principal Component Analysis' },
+      { id: 'dbscan', label: 'DBSCAN' },
     ],
   },
   sl: {
