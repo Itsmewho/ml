@@ -14,9 +14,6 @@ import rlActive from '../assets/menu/squirrellGreen.svg';
 import ulDefault from '../assets/menu/radiation.svg';
 import ulActive from '../assets/menu/radiationGreen.svg';
 
-import slDefault from '../assets/menu/microscope.svg';
-import slActive from '../assets/menu/microscopeGreen.svg';
-
 export const APP_DATA = {
   math: {
     label: 'Mathematics',
@@ -186,19 +183,6 @@ export const APP_DATA = {
       { id: 'kmeans', label: 'K-Means Clustering' },
       { id: 'pca', label: 'Principal Component Analysis' },
       { id: 'dbscan', label: 'DBSCAN' },
-    ],
-  },
-  sl: {
-    label: 'Supervised',
-    icons: {
-      default: slDefault,
-      active: slActive,
-    },
-    topics: [
-      {
-        id: 'classification',
-        label: 'Classification',
-      },
     ],
   },
 };
