@@ -168,8 +168,16 @@ export const APP_DATA = {
     },
     topics: [
       {
-        id: 'rl_intro',
-        label: 'RL Introduction',
+        id: 'grid_world',
+        label: 'Grid World (Environment)',
+      },
+      {
+        id: 'bandits',
+        label: 'Multi-Armed Bandit',
+      },
+      {
+        id: 'q_learning',
+        label: 'Q-Learning (Agent)',
       },
     ],
   },

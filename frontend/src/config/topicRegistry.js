@@ -3,6 +3,7 @@ import { MATH_REGISTRY } from './mathRegistry';
 import { ML_REGISTRY } from './mlRegistry';
 import { UL_REGISTRY } from './ulRegistry';
 import { DL_REGISTRY } from './dlRegistry';
+import { RL_REGISTRY } from './rlRegistry';
 
 // 2. Import Defaults/Placeholders
 import {
@@ -18,6 +19,7 @@ const ACTIVE_TOPICS = {
   ...ML_REGISTRY,
   ...UL_REGISTRY,
   ...DL_REGISTRY,
+  ...RL_REGISTRY,
 };
 
 // 4. "Fallback" mechanism
