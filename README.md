@@ -60,7 +60,7 @@ The Dilemma: Multi-Armed Bandit (Explore vs. Exploit).
 
 The Brain: Q-Learning (Value-based learning).
 
-🛠️ Tech Stack
+Tech Stack
 Framework: React (Vite)
 
 Visualization Engine: Mafs (Interactive Math Graphs)
@@ -70,30 +70,3 @@ Graphics: Custom SVG Animations
 Styling: CSS Modules / Styled Components
 
 Architecture: Registry Pattern (Modular topic loading)
-
-Project Architecture
-We utilize a Registry Pattern to manage the massive list of topics without cluttering the codebase.
-
-Plaintext
-
-src/
-├── components/          # Reusable UI (Sidebar, Layouts, Controls)
-├── config/
-│   ├── topicRegistry.jsx   # The Master Controller
-│   ├── registries/         # Modular Configuration
-│   │   ├── mathRegistry.jsx
-│   │   ├── mlRegistry.jsx
-│   │   ├── dlRegistry.jsx
-│   │   └── rlRegistry.jsx
-├── data/                # The Logic & Visuals
-│   ├── math/            # Math Visuals (e.g., /sigmoid, /dotProduct)
-│   ├── ml/              # Machine Learning (e.g., /knn, /svm)
-│   ├── dl/              # Deep Learning (e.g., /perceptron, /rnn)
-│   └── rl/              # Reinforcement Learning (e.g., /gridWorld)
-Each topic is self-contained in its own folder with three files:
-
-Visual.jsx - The graph or simulation.
-
-Controls.jsx - The sliders and buttons for the user.
-
-Explanation.jsx - The theoretical context.
