@@ -154,10 +154,10 @@ export const APP_DATA = {
       active: dlActive,
     },
     topics: [
-      {
-        id: 'perceptron',
-        label: 'Perceptron',
-      },
+      { id: 'perceptron', label: 'Perceptron' },
+      { id: 'mlp', label: 'Multi-Layer Perceptron' },
+      { id: 'max_pooling', label: 'Max Pooling' },
+      { id: 'rnn', label: 'Recurrent Neural Network' },
     ],
   },
   rl: {
