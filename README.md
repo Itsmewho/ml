@@ -70,3 +70,7 @@ Graphics: Custom SVG Animations
 Styling: CSS Modules / Styled Components
 
 Architecture: Registry Pattern (Modular topic loading)
+
+
+
+Backend folder is not really used it's just part of my basic setup :D 
